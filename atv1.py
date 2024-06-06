@@ -14,16 +14,20 @@ n1 = int(input('Informe o valor inicial: '))
 n2 = int(input('Informe o valor final: '))
 i = int(input('Informe o valor do  incremento: '))
 
-# Caso o valor inicial for menor que o valor final
-if n1 < n2:
-    while n1 <= n2:
-        print(n1)
-        n1 += i
-# Caso o valor inicial for maior que o valor final
-elif n1 > n2:
-    while n1 >= n2:
-        print(n1)
-        n1 -= i
-# Caso se os dois valores informados forem iguais
-elif n1 == n2:
-    print('O valor inicial {} e o valor final {} , são iguais'.format(n1,n2))
+# Caso o incremento é zero
+if i == 0:
+    print("O incremento não pode ser zero, tente novamente!")
+else:
+    # Caso o valor inicial for menor que o valor final
+    if n1 < n2:
+        while n1 <= n2:
+            print(n1)
+            n1 += i
+    # Caso o valor inicial for maior que o valor final
+    elif n1 > n2:
+        while n1 >= n2:
+            print(n1)
+            n1 -= i
+    # Caso se os dois valores informados forem iguais
+    elif n1 == n2:
+        print('O valor inicial {} e o valor final {} , são iguais'.format(n1,n2))
